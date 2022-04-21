@@ -10,9 +10,16 @@ describe "the get_townhall_email method" do
   end
 end
 
-describe "the get_townhall_urls method" do
-  it "should return the townhalls urls" do
-    expect(get_townhall_names).to include("ableiges")
-    expect(get_townhall_names).to include("chatenay-en-france")
+describe "the get_town_names method" do
+  it "should return the town names" do
+    expect(get_town_names).to include("ableiges")
+    expect(get_town_names).to include("chatenay-en-france")
+  end
+end
+
+describe "the get_townhall_emails method" do
+  it "should return the townhalls emails" do
+    expect(get_townhall_emails["guiry-en-vexin"]).to eq("mairie.guiry-en-vexin@wanadoo.fr")
+    expect(get_townhall_emails["chatenay-en-france"]).to eq(nil)
   end
 end
