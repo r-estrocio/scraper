@@ -1,6 +1,8 @@
 require 'nokogiri'
 require 'open-uri'
 
+# https://www.webscrapingapi.com/ruby-web-scraping/
+# https://rmhsolutions.com/softwarestestingtrends/understanding-xpath-to-write-better-xpath-locators/
 # definition of methode
 def scrap_coinmarketcap()
 
@@ -8,7 +10,7 @@ def scrap_coinmarketcap()
   # string html page
   html_page = URI.open("https://coinmarketcap.com/all/views/all/")
   puts "page downloaded"
-  
+
   #transforms the string in a NOKOGIRI super magic document
   #page is NOKOGIRIs object
   page = Nokogiri::HTML(html_page)
